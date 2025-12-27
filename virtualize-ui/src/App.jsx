@@ -1,12 +1,13 @@
-import VirtualizedList from "./components/virtualizedlist";
+import { useState } from 'react'
+import './App.css'
+import {VirtualizedList} from "./components/VirtualizedList";
 
-export default function App() {
+function App() {
   const items = Array.from({ length: 100000 }, (_, i) => `Item ${i + 1}`);
 
   return (
-    <div className="App">
-      <VirtualizedList items={items} itemHeight={50} windowHeight={400} />
-    </div>
-  );
+    <VirtualizedList items={items} itemHeight={50} windowHeight={400} />
+  )
 }
 
+export default App
